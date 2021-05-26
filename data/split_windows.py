@@ -6,7 +6,7 @@ from shutil import copyfile
 from tqdm import tqdm
 
 
-DIR_PATH = os.path.dirname(os.path.realpath(__file__)) + '/'
+DIR_PATH = os.path.dirname(os.path.realpath(__file__)) + '\\'
 
 def split_data(IM_SOURCE, MA_SOURCE, SPLIT_SIZE):
     """
@@ -40,10 +40,10 @@ def make_file_struct(ROOT,CLASS1, CLASS2):
     """
     try:
         os.mkdir(DIR_PATH + f'{ROOT}/')
-        os.mkdir(DIR_PATH + f'{ROOT}/train_{CLASS1}/')
-        os.mkdir(DIR_PATH + f'{ROOT}/test_{CLASS1}/')
-        os.mkdir(DIR_PATH + f'{ROOT}/train_{CLASS2}/')
-        os.mkdir(DIR_PATH + f'{ROOT}/test_{CLASS2}/')
+        os.mkdir(DIR_PATH + f'{ROOT}\\train_{CLASS1}\\')
+        os.mkdir(DIR_PATH + f'{ROOT}\\test_{CLASS1}\\')
+        os.mkdir(DIR_PATH + f'{ROOT}\\train_{CLASS2}\\')
+        os.mkdir(DIR_PATH + f'{ROOT}\\test_{CLASS2}\\')
     except OSError:
         print("There was an OS error, either import os or the directory already exists")
         print(OSError)
@@ -56,13 +56,13 @@ if __name__ == '__main__':
 
     make_file_struct(ROOT,CLASS1, CLASS2)
 
-    im_DIR = DIR_PATH + "images/"
-    TRAINING_im_DIR = DIR_PATH + f'{ROOT}/train_{CLASS1}/'
-    TESTING_im_DIR = DIR_PATH + f'{ROOT}/test_{CLASS1}/'
+    im_DIR = DIR_PATH + "images\\"
+    TRAINING_im_DIR = DIR_PATH + f'{ROOT}\\train_{CLASS1}\\'
+    TESTING_im_DIR = DIR_PATH + f'{ROOT}\\test_{CLASS1}\\'
 
-    ma_DIR = DIR_PATH + "masks/"
-    TRAINING_ma_DIR = DIR_PATH + f'{ROOT}/train_{CLASS2}/'
-    TESTING_ma_DIR = DIR_PATH + f'{ROOT}/test_{CLASS2}/'
+    ma_DIR = DIR_PATH + "masks\\"
+    TRAINING_ma_DIR = DIR_PATH + f'{ROOT}\\train_{CLASS2}\\'
+    TESTING_ma_DIR = DIR_PATH + f'{ROOT}\\test_{CLASS2}\\'
 
     split_size = 0.8
     split_data(im_DIR, ma_DIR, split_size)
