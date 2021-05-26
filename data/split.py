@@ -25,10 +25,10 @@ def split_data(IM_SOURCE, MA_SOURCE, SPLIT_SIZE):
     for i in tqdm(range(SIZE)):
         if(i < round(SPLIT_SIZE*SIZE)):
             copyfile(IM_SOURCE+data[i],TRAINING_im_DIR+data[i])
-            copyfile(MA_SOURCE+data[i].split('.jpg')[0]+'_Segmentation.png',TRAINING_ma_DIR+data[i])
+            copyfile(MA_SOURCE+data[i].split('.jpg')[0]+'_segmentation.png',TRAINING_ma_DIR+data[i])
         else:
             copyfile(IM_SOURCE+data[i],TESTING_im_DIR+data[i])
-            copyfile(MA_SOURCE+data[i].split('.jpg')[0]+'_Segmentation.png',TESTING_ma_DIR+data[i])
+            copyfile(MA_SOURCE+data[i].split('.jpg')[0]+'_segmentation.png',TESTING_ma_DIR+data[i])
 
 def make_file_struct(ROOT,CLASS1, CLASS2):
     """
