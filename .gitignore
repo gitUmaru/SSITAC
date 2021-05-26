@@ -1,3 +1,7 @@
+# Data files
+data/images/ISIC_00[01]*
+data/masks/ISIC_00[01]*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
