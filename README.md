@@ -1,5 +1,5 @@
 # SSITAC
-## **S**kin **S**egmentation and **I**ndividual **T**ypology **A**ngle **C**omputation
+**S**kin **S**egmentation and **I**ndividual **T**ypology **A**ngle **C**omputation
 
 ## About
 This code repository is an attempt of an implementation of semantic skin segmentation using a convolutional-deconvolutional approach. This appraoch is inspired by the paper [Semantic Fire Segmentation Model Based on Convolutional Neural Network for Outdoor Image](https://link.springer.com/article/10.1007/s10694-020-01080-z#Sec6). The network architecture is borrowed from that paper, with changes made to the loss function. The dataset that I used is a composite dataset of ISIC 2018 validation data and ISIC 2016 training data.
